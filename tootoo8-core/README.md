@@ -8,28 +8,59 @@
 
 ## Full Screen: [Three.js Basic]( ./plugin/threejs-basic.html )
 
+This is a sample read me file.
+
+The real TooTo read me here: [Read Me]( https://pushme-pullyou.github.io/tootoo-more/#README.md )
+
 
 ## Concept
 
-This is a sample read me file.
+### Issues / Problems
 
-Real read me here: [Read Me]( https://pushme-pullyou.github.io/tootoo-more/#README.md )
+The general idea is to adapt the ideas developed in Christopher Alexander's _et al_ [A Pattern Language]( https://books.google.com/books?id=hwAHmktpk5IC&pg=PR10#v=onepage&q&f=false ) - as summarized on page 10.
+
+> Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice.
+
+>Patterns are descriptions of common problems and proposal for the solutions that can be used repeatedly every time the problem is encountered and producing an different outcome.
+
 
 lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?
 
 
+### Mission
+
+* Statement of goals,objectives or strategies, applicable now as well as in the future
+
+
+### Vision
+
+* Descriptive picture of a desired future state
+
+
 ## Links of Interest
 
-Code is all inspired by:
 
-https://www.w3schools.com/howto/
+See also:
 
-https://glitch.com/edit/#!/theo
+* https://readmetips.github.io/
+* https://opensource.guide/
+* https://www.w3schools.com/howto/
+* https://glitch.com/
+* https://bl.ocks.org/
+* https://threejs.org/
+* https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
 
 
 ## Change Log
 
+
+### 2017-08-21 ~ Theo
+
+* Add even more links and text
+
 ### 2017-08-20 ~ Theo
 
 * Add links and more text
+
+
 

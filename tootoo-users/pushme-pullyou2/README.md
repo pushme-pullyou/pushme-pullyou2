@@ -92,16 +92,6 @@ Then you have come to the right place.
 
 ### Mission
 
-2017-08-21
-* Access locally/remotely, online/offline
-* Solve problems faster by melding coding and using input/processing/output tools into unified flow of efforts
-* Help you develop skills you can use over and over again most everywhere
-* Built to fork, edit and share - all FOSS in GitHub
-* Build using fastest, shortest and easiest code possible
-* Ready to use, cut and paste vary short cookbook-style scripts
-* Code that's easy to read - so you concentrate on solving the problem more than guessing the intent of the programmer
-
-Older
 * Explore GitHub using the GitHub API
 * Explore the GitHub API using entry-level, plain-vanilla JavaScript
 * Help you build tools that make the GitHub web pages and the data come to you

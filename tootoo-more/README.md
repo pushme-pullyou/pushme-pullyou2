@@ -3,28 +3,69 @@
 
 [TooToo More Read me]( #README.md )
 ====
+_Drive GitHub faster files an hour_
 
 Toys for TooToo to play with
 
 Given that the TooToo8 read me is a template, this read me is where actual updates and dev notes are kept.
 
+## Concept
 
+### Issues / The problem that needs solving
 
-## Issues
+You have problems that need solving. Helpful material may be available on the Internet. The Internet is very big. Your time is very short.
 
+The fastest way of acquiring perceptions is by reading. Tools that help you access and process large amounts of content on the Internet may help you solve your problems faster, more easily and with less effort. 
 
+### Mission
+
+* Browse and view many files on GitHub with remarkable ease
+* Traverse, select and display as many folders and files as possible in the shortest amount of time
+* Single click or single action to get to the next item you want to see 
+* Buttons for: Edit this page, ~~Next page~~, ~~Previous page~~
+* Know where you are. Menus with current selection highlighted
+
+ 
+### Vision
+
+* Explore new ways of storing and visualizing content
+* Just-in-time learning. Become a knowledge DJ. Perception enhancer
 
 
 ## To-Do
 
-* 2017-08-20 ~ work on demo creation automation
-* 2017-08-20 ~ add documentation to tt more read me
+* 2017-08-21 ~ Get Air Doodle off the ground
+* 2017-08-21 ~ Support location hash with internal links in Markdown files
+* 2017-08-20 ~ Work on demo creation automation
+* 2017-08-20 ~ Add documentation to tt more read me
+* 2017-08-21 ~ Make content editable and savable
+* 2017-08-21 ~ Highlight and retain <span style=background-color:yellow; >selected text</span>
+*  2017-08-21 ~ Voice recognition for 'next' and 'previous'
 * 2017-08-04 ~ Audio / podcaster
 
+
+## Links of Interest
+
+The faster you see, the more the data, the better the quality of your judgment
+
+See 'corpora':
+* https://en.wikipedia.org/wiki/Text_corpus
+* https://en.wikipedia.org/wiki/Corpus_linguistics
+* https://github.com/dariusk/corpora
+* http://corpus.byu.edu/size.asp
+	* corpora, size, queries = better resources, more insight
+* https://machinelearningmastery.com/hands-on-big-data-by-peter-norvig/
+> The worst algorithm beats the best algorithm when the size of the dataset is dramatically increased. The lesson is to look to max-out the data for the model and find the plateau before moving onto the next model.
 
 
 ## Change Log
 
+### 2017-08-21 ~ Theo
+
+* Working on pushme pullyou2
+* Trying out single menu file
+* Updating read me files
+* Add window.scrollTo( 0, 0 );
 
 ### 2017-08-20 ~ Theo
 
