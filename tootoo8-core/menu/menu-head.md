@@ -1,6 +1,6 @@
 <style>
 
-p { margin: 0 }
+#menu p { margin: 0 }
 
 </style>
 

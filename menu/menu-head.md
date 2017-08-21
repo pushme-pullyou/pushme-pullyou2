@@ -7,14 +7,10 @@
 
 [pushMe-pullYou]( https://pushme-pullyou.github.io )
 
-## [TooToo More]( index.html )
+## [pushMe-pullYou2]( index.html )
 
 #### [README / home page]( #README.md )
 
-### [TooToo8 Core]( ../tootoo8-core/index.html )
 
 ***
-
-### [Top Menu]( #./menu/menu-body.md )
-
 
