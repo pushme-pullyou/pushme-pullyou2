@@ -1,4 +1,4 @@
-<span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( http://theo-armour.github.io/snippets/tootoo8-core/#README.md "View file as a web page." ) </span>
+<span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( http://theo-armour.github.io/#README.md "View file as a web page." ) </span>
 
 
 [read me]( #README.md )
@@ -11,7 +11,7 @@
 
 ## concept
 
-This is the seventh significant update to the theo-armour.github.io. It the fastest, most quickly built to date - taking less than a day to build.
+2017-08-22 ~ This is the seventh significant update to the theo-armour.github.io. It's the fastest, most quickly built site to date - taking less than a day to build.
 
 
 ## mission
@@ -33,12 +33,13 @@ Thinking out loud as I put the package together:
 
 * Snippets of code. I would be lost without my snippets. 
 
-* Easy Peasy Pleasy. Writing code for beginners is a good thing. If you can explain it to student, then why go further?
+* Easy Peasy Pleasy. Writing code for beginners is a good thing. If you can be read by a student and it does the job, then why go further?
 
 * Self-garbage collecting. When we talk about about cleaning up the memery on a computer, we call it 'garbage collection'. We humans need to do it too. We need to erase all the established practices, well-known 'gotchas' ans rules-of-thumb. Contemporary computing is moving so fast that every thing we do from habit can and should be questioned. Those who code from history are doomed.
 
-* Just-in-time-Learning 
+* Just-in-time-Learning. Data jockey. Become a knowledge DJ. Perception enhancer.
  
+* Stand on the shoulders of giants. Follow Mr.doob. Use Stackoverflow. Search with Google
 
 ## links of interest
 

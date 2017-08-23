@@ -265,10 +265,10 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 		}
 
 // main
-		if ( !menu.style.width || menu.style.width === '250px' ) {
+		if ( !menu.style.width || menu.style.width === '325px' ) {
 
 //			main.style.width = ( window.innerWidth - 250 ) + 'px';
-			main.style.width = ( window.clientWidth - 250 ) + 'px';
+			main.style.width = ( window.clientWidth - 325 ) + 'px';
 
 		} else { 
 
@@ -282,21 +282,21 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 	function onClickSlideMenu() {
 
-		if ( !menu.style.width || menu.style.width === '250px' ) {
+		if ( !menu.style.width || menu.style.width === '325px' ) {
 
 			menu.style.width = '0';
 			hamburger.style.left = '0';
 
 			main.style.marginLeft = '0';
-			main.style.width = window.innerWidth + 'px';
+			main.style.width = window.clientWidth + 'px';
 			
 		} else {
 
-			menu.style.width = '250px';
-			hamburger.style.left = '250px';
+			menu.style.width = '325px';
+			hamburger.style.left = '325px';
 
-			main.style.marginLeft = '250px';
-			main.style.width = ( window.innerWidth - 250 ) + 'px';
+			main.style.marginLeft = '325px';
+			main.style.width = ( window.clientWidth - 325 ) + 'px';
 
 		}
 

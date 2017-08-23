@@ -17,7 +17,7 @@
 
 	div.scrollmenu a:hover { background-color: #777; }
 
-	div.iframeMain { width: 100% }
+	div.iframeMain { width: 100%; }
 
 </style>
 </head>
@@ -42,15 +42,14 @@
 
 	</div>
 
-		<div id = "contentsHidden" ></div>
-		<div id=titles ></div>
-		<div id = "contents" ></div>
+	<div id = "contentsHidden" ></div>
+	<div id=titles ></div>
+	<div id = "contents" ></div>
 
 <script>
 
 // https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp
 
-	const b = '<br>';
 
 	init();
 
@@ -74,6 +73,8 @@
 		let url;
 
 		url = location.hash.slice( 1 );
+
+		titles.inneHTML = '';
 
 		if ( url.endsWith( '.md' ) ) {
 

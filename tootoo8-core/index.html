@@ -1,21 +1,12 @@
 <!doctype html>
 <html lang = "en" >
 <head>
-
 <meta charset = "utf-8" >
-
-<!-- https://clicktorelease.com -->
-<meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no" >
-
-<!-- Mr.doob
-<meta name = "viewport" content = "width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" >
--->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name = description content = "File wrangler. Default index.html file. Opens HTML or Markdown files. Passes location.hash." >
 <meta name = keywords content = "ShowDown,Markdown,AJAX,JavaScript,HTML,CSS,GitHub,FOSS" >
 <meta name = date content = "2017-08-16" >
-
 <title></title>
-
 <style id = "foo" >
 
 /* items in mostly in order of: tag/class/id then alphabetical */
@@ -81,7 +72,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 /*
 
-// Put in Markdown file
+// Put in Markdown file if desired
 
 	<div class="breakout" style=background-image:url("https://lorempixel.com/1000/500");height:500px; >breakout image</div>
 */
@@ -129,7 +120,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 //	document.body.style.setProperty('--menu-width', '325px' );
 
-	let projectName = '';
+	let userGitHub, folderGitHub;
 
 	init();
 
@@ -138,10 +129,6 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		let arr = location.pathname.split( '/' );
 
-//		let p = arr.pop();
-
-//		projectName = arr.pop().replace( /\.github\.io/gi, '');
-//console.log( 'projectName', projectName  );
 		showdown.setFlavor( 'github' );
 
 		requestFile( './menu/menu-head.md', menuHead );
@@ -153,9 +140,6 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 		onHashChange();
 
 		window.addEventListener( 'hashchange', onHashChange, false );
-
-//		window.addEventListener( 'orientationchange', function() { window.location.reload(); } );
-//		window.addEventListener( 'orientationchange', onWindowResize, false  );
 
 		window.addEventListener( 'resize', onWindowResize, false );
 
@@ -171,20 +155,15 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		url = location.hash.slice( 1 );
 
-//		document.title = url.split( '/' ).pop();
-
-		title = url.split( '/' ).pop().replace( /-|.md|.html/g, ' ' );
-
-		document.title = title ? title + ' - ' + projectName : 'README - ' + projectName;
-
 		if ( !url ) {
 
 			url = 'README.md';
 			requestFile( url, mainContents );
 
 // For example: to set issues as blog on home page
-//			url = 'view-github-issues.html';
-//			main.innerHTML = '<iframe id=iframeMain class=iframeReadMe src=' + url + ' ></iframe>';
+//			url = './pugins/view-github-issues.html';
+
+//			main.innerHTML = '<iframe id=ifrMain  src=' + url + ' ></iframe>';
 //			main.style.overflow = 'hidden';
 
 		} else if ( url.startsWith( '.\/menu' ) ) {
@@ -340,9 +319,15 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 			}
 
-			onload();
+			title = url.split( '/' ).pop().replace( /-|.md|.html/g, ' ' );
+//			title = title === "menu body " ? 'home' : title;
+			document.title = title + ' - ' + userGitHub;
+
+			window.scrollTo( 0, 0 );
 
 			onWindowResize();
+
+			onload();
 
 		};
 

@@ -122,6 +122,12 @@
 
 		parent.mnuContents.innerHTML = txt;
 
+		if ( userData.login !== 'theo-armour' ) {
+
+			RES.getRepos( userData.login );
+
+		}
+
 //		height = document.body.scrollHeight;
 
 //		parent.ifrMenu.style.height = height + 'px';

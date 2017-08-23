@@ -319,9 +319,8 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 			}
 
 			title = url.split( '/' ).pop().replace( /-|.md|.html/g, ' ' );
-
-			document.title = title ? title + ' - ' + userGitHub : 'README - ' + userGitHub;
-
+			title = title === "menu body " ? 'home' : title;
+			document.title = title + ' - ' + userGitHub;
 
 			window.scrollTo( 0, 0 );
 
