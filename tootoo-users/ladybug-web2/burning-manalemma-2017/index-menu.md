@@ -19,9 +19,9 @@
 ### [Move / Travel]( #menus/menu-move.md )
 ### [Overlays]( #menus/menu-overlays.md )
 ### [Analemma]( #menus/menu-analemma.md )
-
+<!--
 ### [Screen Capture]( #menus/menu-screen-capture.md "Create an animated GIF" )
-
+-->
 ***
 ### [Burning mAnalemma 2017]( #analemma4-3d.html#latitude:40.786944,longitude:-119.204444,zoom:11,offsetUTC:-420 )
 

@@ -19,6 +19,7 @@
 ### [Move / Travel]( #menus/menu-move.md )
 ### [Overlays]( #menus/menu-overlays.md )
 ### [Analemma]( #menus/menu-analemma.md )
+<!--
 ### [Sun Range]( #menus/menu-sun-range.md )
 ### [Solar Access]( #menus/menu-solar-access.md )
 
@@ -27,7 +28,7 @@
 ### [EPW Play Weather]( #menus/menu-epw-json-play.md "Play EPW Weather Files in 3D" )
 
 ### [Screen Capture]( #dialog-screen-capture.md "Create an animated GIF" )
-
+-->
 ***
 
 
