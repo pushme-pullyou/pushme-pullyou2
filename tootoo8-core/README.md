@@ -4,9 +4,9 @@
 [TooToo Read Me Template]( #README.md )
 ====
 
-<iframe class=iframeReadMe src=./plugin/threejs-basic.html width=100% height=600px onload=this.contentWindow.controls.enableZoom=false; ></iframe>
+<iframe class=iframeReadMe src=./plugins/threejs-basic.html width=100% height=600px onload=this.contentWindow.controls.enableZoom=false; ></iframe>
 
-## Full Screen: [Three.js Basic]( ./plugin/threejs-basic.html )
+## Full Screen: [Three.js Basic]( ./plugins/threejs-basic.html )
 
 This is a sample read me file Template.
 
