@@ -60,6 +60,12 @@ See 'corpora':
 
 ## Change Log
 
+
+### 2017-08-25 ~ 
+
+* view-github-issues: add open and display header markdown file
+
+
 ### 2017-08-21 ~ Theo
 
 * Working on pushme pullyou2

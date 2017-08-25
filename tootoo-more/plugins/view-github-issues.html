@@ -17,18 +17,15 @@
 </head>
 <body>
 <script src = "https://cdn.rawgit.com/showdownjs/showdown/master/dist/showdown.min.js" ></script>
-
+<script src = "../index.js" ></script>
 
 	<div id = "menu" >
 
-		<div id = "header" ><h1><a id = "title" href = "" >ibpsa2017.github.io Read Me</a></h1></div>
+		<div>
+			<h1><a id = "title" href = "" ></a></h1>
+		</div>
 
-		<iframe id="ifrReadMe" src=https://ibpsa2017.github.io/epw-3d/index.html width=100% height=600px ></iframe>
-		<i>Script of the moment: <a href="https://ibpsa2017.github.io/epw-3d/index.html" >EPW 3D</a> showing downtown San Francisco with Hyatt Embarcadero at center. Click 'Play the Year' to view a year of EPW data</i>
-		<span style="display: none" >Not visible in GitHub source code view</span>
-
-		<p>ibpsa2017.github.io is an unofficial conference.attendee site. We are in no way officially affiliated with IBPSA. See <a href="https://ibpsa2017.github.io/#./pages/about.md" target=_top >About</a> for details.</p>
-
+		<div id = "header" ></div>
 
 		<hr>
 
@@ -37,6 +34,12 @@
 	</div>
 
 <script>
+// Add blog posts to your site
+
+	var defaults = defaults || {};
+
+	const userGitHub = defaults.user ? defaults.user : '';
+	const repository = defaults.repository ? defaults.repository : '';
 
 	const b = '<br>';
 
@@ -48,9 +51,11 @@
 
 		let urlIssues;
 
-		urlIssues = 'https://api.github.com/repos/ibpsa2017/ibpsa2017.github.io/issues';
+		urlIssues = 'https://api.github.com/repos/' + userGitHub + '/' + repository + '/issues';
 
-		requestFile( urlIssues );
+		requestFile( '../pages/github-issues-header.md' , callbackHeader );
+
+		requestFile( urlIssues, callbackPost );
 
 		window.addEventListener( 'resize', onWindowResize, false );
 
@@ -58,52 +63,91 @@
 
 
 
-	function requestFile( url ) {
+	function callbackHeader( xhr ) {
 
-		let converter, xhr;
+		let converter, response;
 
 		converter = new showdown.Converter();
 
-		xhr = new XMLHttpRequest();
-		xhr.crossOrigin = 'anonymous';
-		xhr.open( 'GET', url, true );
-		xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
-//		xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded  ); }; /// or something
-		xhr.onload = callback;
-		xhr.send( null );
-
-		function callback( xhr ) {
-
-			let response, json, lines;
-
-			response = xhr.target.response;
+		response = xhr.target.response;
 //console.log( 'response', response );
 
-			json = JSON.parse( response );
+		header.innerHTML = converter.makeHtml( response );
+
+	}
+
+
+
+	function callbackPost( xhr ) {
+
+		let converter;
+
+		converter = new showdown.Converter();
+
+		let response, json, lines;
+
+		response = xhr.target.response;
+//console.log( 'response', response );
+
+		json = JSON.parse( response );
+// console.log( '', json );
+
+		for ( var i = 0; i < json.length; i++ ) {
+
+			issue = json[ i ];
+
+			html = converter.makeHtml( issue.body );
+			html = html.replace( /\<a href\=/gi, '<a target=_top href=' );
+//console.log( '', html );
+
+			contents.innerHTML += 
+
+//				'<h1>blog post: ' + ( issue.title ).link( issue.html_url ) + '</h1>' + 
+				'<h1>blog post: <a href="' + issue.html_url + '" target=_top >' + issue.title + '</a></h1>' + 
+
+				'<div><i>written on: ' + issue.created_at + 
+				' by <a target+=top href="' + issue.user.html_url + '" >' + issue.user.login +  '</a></i></div>' +
+				html +
+
+			'<hr>';
+
+		}
+
+	}
+
+
+	function callbackPost( xhr ) {
+
+		let converter;
+
+		converter = new showdown.Converter();
+
+		let response, json, lines;
+
+		response = xhr.target.response;
+//console.log( 'response', response );
+
+		json = JSON.parse( response );
 // console.log( '', json );
 
 
-			for ( var i = 0; i < json.length; i++ ) {
+		for ( var i = 0; i < json.length; i++ ) {
 
-				issue = json[ i ];
+			issue = json[ i ];
 
-
-
-				html = converter.makeHtml( issue.body );
-				html = html.replace( /\<a href\=/gi, '<a target=_top href=' );
+			html = converter.makeHtml( issue.body );
+			html = html.replace( /\<a href\=/gi, '<a target=_top href=' );
 //console.log( '', html );
-				contents.innerHTML += 
+			contents.innerHTML += 
 
 //					'<h1>blog post: ' + ( issue.title ).link( issue.html_url ) + '</h1>' + 
-					'<h1>blog post: <a href="' + issue.html_url + '" target=_top >' + issue.title + '</a></h1>' + 
+				'<h1>blog post: <a href="' + issue.html_url + '" target=_top >' + issue.title + '</a></h1>' + 
 
-					'<div><i>written on: ' + issue.created_at + 
-					' by <a target+=top href="' + issue.user.html_url + '" >' + issue.user.login +  '</a></i></div>' +
-					html +
+				'<div><i>written on: ' + issue.created_at + 
+				' by <a target+=top href="' + issue.user.html_url + '" >' + issue.user.login +  '</a></i></div>' +
+				html +
 
-				'<hr>';
-
-			}
+			'<hr>';
 
 		}
 
@@ -126,6 +170,19 @@
 	}
 
 
+	function requestFile( url, callback ) {
+
+		let xhr;
+
+		xhr = new XMLHttpRequest();
+		xhr.crossOrigin = 'anonymous';
+		xhr.open( 'GET', url, true );
+		xhr.onerror = function( xhr ) { console.log( 'error:', xhr  ); };
+//		xhr.onprogress = function( xhr ) { console.log( 'bytes loaded:', xhr.loaded  ); }; /// or something
+		xhr.onload = callback;
+		xhr.send( null );
+
+	}
 
 </script>
 </body>

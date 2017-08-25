@@ -7,8 +7,8 @@
 
 	defaults.menuWidth = 250;
 
-	defaults.user = 'ibpsa2017';
+	defaults.user = 'pushme-pullyou';
 
-	defaults.folder = 'ibpsa2017.github.io/blob/master/';
+	defaults.folder = 'pushme-pullyou2';
 
-	defaults.url = 'analemma4-3d.html';
+//	defaults.url = 'README.md';

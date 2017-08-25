@@ -7,7 +7,8 @@
 
 </style>
 
-[unofficial ibpsa2017]( https://ibpsa2017.github.io ) &raquo;
+[ladbug tools]( https://ladybug-tools.github.io/ ) &raquo;
+[spider-tools]( ../index.html ) &raquo;
 
 ## [Burning mAnalemma 2017]( index.html )
 

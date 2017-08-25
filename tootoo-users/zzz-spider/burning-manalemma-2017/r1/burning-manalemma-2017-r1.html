@@ -9,7 +9,7 @@
 <!-- Mr.doob
 <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 -->
-<title>Burning mAnalemma 2017</title>
+<title>Burning mAnalemma 2017 R1</title>
 <meta name=description content="3D map, terrain and buildings all with sunshine in your browser" >
 <meta name=keywords content="MapBox,Google,Three.js,WebGL,JavaScript,HTML,CSS,GitHub,FOSS" >
 <meta name=date content="2017-08-23" >
@@ -27,11 +27,11 @@
 <body>
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/dev/build/three.min.js" ></script>
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/dev/examples/js/controls/OrbitControls.js" ></script>
-<script src = "burning-manalemma-2017.js" ></script>
+<script src = "burning-manalemma-2017-r1.js" ></script>
 
 	<div id="header" >
 		<div id="title" ></div>
-		<div id="logHeights" >Featuring <a href=http://www.temple2017.org/ >Temple 2017</a></div>
+		<div id="logHeights" >Featuring <b><a href=http://www.temple2017.org/ >Temple 2017</a></b></div>
 		<div id="logIntersect" >Click 'Draw Analemma  & Sun' </div>
 		<div id="debug" ></div>
 
@@ -104,10 +104,12 @@
 
 	function init() {
 
-		parent.projectName = 'Ladybug Web';
-		parent.document.title = 'Analemma 3D';
+//		parent.projectName = 'Ladybug Web';
+//		parent.document.title = 'Analemma 3D';
 
-		title.innerHTML = '<h1><a href="" >' + document.title +'</a> &nbsp; <a href="index.html" target="_blank">&#x1F517;</a></h1>';
+		title.innerHTML = '<h1><a href="" >' + document.title +'</a>' +
+//&nbsp; '<a href="index.html" target="_blank">&#x1F517;</a>' +
+		'</h1>';
 
 		renderer = new THREE.WebGLRenderer( { alpha: 1, antialias: true }  );
 		renderer.setSize( window.innerWidth, window.innerHeight );
@@ -140,6 +142,7 @@
 
 		window.addEventListener( 'hashchange', onHashChange, false );
 
+		parent.ifrMenu.src = "plugins/mnu-analemma3-3d.html";
 
 	}
 
@@ -183,8 +186,6 @@
 		bm.scale.set( 0.3, 0.3, 0.3 );
 		bm.position.set( 50, 24, 50 );
 		scene.add( bm );
-
-		
 
 	}
 
