@@ -65,14 +65,18 @@
 
 	function callbackHeader( xhr ) {
 
-		let converter, response;
+		let converter, response, html;
 
 		converter = new showdown.Converter();
 
 		response = xhr.target.response;
 //console.log( 'response', response );
 
-		header.innerHTML = converter.makeHtml( response );
+		html = converter.makeHtml( response );
+
+		html = html.replace( /\<a href\=/gi, '<a target=_top href=' );
+
+		header.innerHTML = converter.makeHtml( html );
 
 	}
 
