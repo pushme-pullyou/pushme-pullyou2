@@ -30,6 +30,9 @@
 		<div id = "contents" ></div>
 	</div>
 
+	<div id=divSubMenu ></div>
+
+
 <script>
 
 
@@ -56,6 +59,13 @@
 	init();
 
 	function init() {
+
+		if ( window.top !== window.self ) {
+
+			parent.divSubMenu.innerHTML = '';
+			parent.ifrMenu.src = '';
+
+		}
 
 		let txt;
 
@@ -92,9 +102,9 @@
 
 		}
 
-		parent.mnuContents.innerHTML = txt;
+		parent.divSubMenu.innerHTML = txt;
 
-		height = document.body.scrollHeight;
+//		height = document.body.scrollHeight;
 
 //		parent.ifrMenu.style.height = height + 'px';
 

@@ -57,7 +57,12 @@ PDFJS.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
 
 	function init() {
 
-		let txt;
+		if ( window.top !== window.self ) { 
+
+			parent.divSubMenu.innerHTML = '';
+			parent.ifrMenu.src = '';
+
+		}
 
 		title.innerHTML = location.href.split( '/' ).pop().slice( 0, -5 ).replace( /-/g, ' ' );
 

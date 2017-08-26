@@ -9,8 +9,6 @@
 
 	defaults.user = 'pushme-pullyou';
 
-	defaults.repository = "pushme-pullyou2";
-
 	defaults.folder = 'pushme-pullyou2';
 
 //	defaults.url = 'README.md';

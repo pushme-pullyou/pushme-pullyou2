@@ -2,6 +2,7 @@
 
 h3 { margin: 0 }
 
+
 </style>
 
 
@@ -9,7 +10,7 @@ h3 { margin: 0 }
 
 ## [TooToo More]( index.html )
 
-#### [README / home page]( #README.md )
+### [README / home page]( #README.md )
 
 ### [TooToo8 Core]( ../tootoo8-core/index.html )
 
@@ -19,13 +20,10 @@ h3 { margin: 0 }
 
 &nbsp;
 
-### [View STL]( #./plugin/view-stl.html )
 
+### [Geocoder MD]( #menu-geocoder.md )
 
-### [Stardust]( #./plugin/view-stl.html#http://jaanga.github.io/3d-models/stl/nasa/Stardust_35.stl )
-
-
-### [Tenneyson Bust]( #./plugin/view-stl.html#http://jaanga.github.io/3d-models/stl/sculpture/tennyson+bust+plaster1.stl )
+<iframe id = "ifrGeocoder" src = "./plugins/view-geocoder.html" width = "100%" height = "400" frameBorder = "0" ></iframe>
 
 
 ***

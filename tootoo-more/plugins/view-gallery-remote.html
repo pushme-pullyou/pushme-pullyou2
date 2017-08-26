@@ -28,6 +28,13 @@
 
 	function init() {
 
+		if ( window.top !== window.self ) { 
+
+			parent.divSubMenu.innerHTML = '';
+			parent.ifrMenu.src = '';
+
+		}
+
 		title.innerHTML = location.href.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' );
 
 		getGallery();

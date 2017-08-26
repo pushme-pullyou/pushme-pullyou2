@@ -17,6 +17,9 @@ h3 { margin: 0 }
 
 ***
 
+### [Top Menu]( #./menu/menu-body.md )
+
+
 pages
 
 ### [breakout]( #./pages/breakout-image.md )
@@ -26,34 +29,30 @@ pages
 
 menu
 
-
-### [View STL]( #plugins/view-stl.html )
-
-
-### [View Web Pages]( #plugins/update-menu.html#menus/menu-view-web-pages.md )
+### [Geocoder]( #./menu/menu-geocoder.md )
 
 
-### [View GitHub Contents]( #plugins/view-github-contents.html )
+### [View STL]( #./menu/menu-view-stl.md )
 
 
-### [View GitHub Profile]( #plugins/view-github-profile.html )
+### [View Web Pages]( #./menu/menu-view-web-pages.md )
 
 
-### [View GitHub Search]( #plugins/view-github-search.html )
+### [View GitHub Contents]( #./menu/menu-view-github-contents.md )
 
 
+### [View GitHub Profile]( #./menu/menu-view-github-profile.md )
 
 
+### [View GitHub Search]( #./menu/menu-view-github-search.md )
 
-### [View Air Doodle]( #plugins/air-doodle.html )
+
+### [Screen Capture]( #./menu/menu-screen-capture.md )
+
+
+### [View Air Doodle]( #./menu/menu-air-doodle.md )
 
 plugin
-
-### [Internal Links]( #plugins/internal-links.html )
-
-
-### [Geocoder]( #plugins/view-map.html )
-
 
 ### [View RSS]( #plugins/view-rss.html )
 
@@ -70,13 +69,10 @@ plugin
 ### [View PDF]( #./plugins/view-pdf.html )
 
 
-### [Three.js Basic]( #./plugins/threejs-basic.html )
+### [View Three.js Math Function]( #./plugins/threejs-math-functions.html )
 
 
-### [Three.js Math Function]( #./plugins/threejs-math-functions.html )
 
-
-### [Screen Capture]( #plugins/screen-capture.html )
 
 
 ***
@@ -87,13 +83,6 @@ Utilities
 
 
 ### [Scrape Data From File]( #../utilities/scrape-data-from-file/scrape-data-from-file-r1.html )
-
-***
-
-<div id=divSubMenu ></div>
-
-<iframe id=ifrMenu class=iframeMenu ></iframe>
-
 
 ***
 

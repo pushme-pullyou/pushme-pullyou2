@@ -49,6 +49,13 @@
 
 		showdown.setFlavor( 'github' );
 
+		if ( window.top !== window.self ) { 
+
+			parent.divSubMenu.innerHTML = '';
+			parent.ifrMenu.src = '';
+
+		}
+
 		let urlIssues;
 
 		urlIssues = 'https://api.github.com/repos/' + userGitHub + '/' + repository + '/issues';

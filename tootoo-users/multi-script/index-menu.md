@@ -24,7 +24,7 @@
 ### [markdown help]( #./pages/markdown-help.md )
 
 
-### [threejs basic]( #./plugins/threejs-basic.html ) [&#x1F5D7;]( ./plugin/threejs-basic.html )
+### [threejs basic]( #./plugins/threejs-basic.html ) [&#x1F5D7;]( ./plugin/threejs-basic.html "Run full screen" )
 
 
 

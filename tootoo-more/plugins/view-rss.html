@@ -28,9 +28,16 @@ body { font: 12pt monospace; left: 0; margin: 0 auto; max-width: 800px; right:0;
 
 	let fName =  urlCORS + 'http://www.grasshopper3d.com/group/ladybug/forum/topic/list?feed=yes';
 
+	init();
 
-	requestFile( fName );
+	function init() {
 
+		requestFile( fName );
+
+		parent.divSubMenu.innerHTML = '';
+		parent.ifrMenu.src = '';
+
+	}
 
 	function requestFile( fileName ) {
 
@@ -40,7 +47,7 @@ body { font: 12pt monospace; left: 0; margin: 0 auto; max-width: 800px; right:0;
 		xhr.crossOrigin = 'anonymous';
 		xhr.open( 'GET', fileName, true );
 		xhr.onerror = function( xhr ) { console.log( 'error', xhr  ); };
-		xhr.onprogress = function( xhr ) { console.log( 'items', xhr.loaded  ); }; /// or something
+//		xhr.onprogress = function( xhr ) { console.log( 'items', xhr.loaded  ); }; /// or something
 		xhr.onload = callback;
 		xhr.send( null );
 

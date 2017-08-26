@@ -44,6 +44,15 @@
 
 	function init() {
 
+		if ( window.top !== window.self ) { 
+
+			parent.divSubMenu.innerHTML = '';
+			parent.ifrMenu.src = '';
+
+			parent.requestFile( "menus/menu-view-stl.md", parent.divSubMenu );
+
+		}
+
 		title.innerHTML = '<h1><a href="" >' + location.href.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' ) +'</a></h1>';
 
 		renderer = new THREE.WebGLRenderer( { alpha: 1, antialias: true }  );
@@ -61,7 +70,6 @@
 
 		axisHelper = new THREE.AxisHelper( 1 );
 		scene.add( axisHelper );
-
 
 		parseHash();
 
