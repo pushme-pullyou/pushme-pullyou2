@@ -10,7 +10,9 @@
 <style>
 
 	body { font: 11pt monospace; margin: 0; overflow: hidden; }
-	#menu { position: absolute; text-align: center; width: 100%; }
+
+	#title { position: absolute; text-align: center; width: 100%; }
+	#menu { position: absolute; right: 20px; max-width: 300px; top: 100px; }
 
 </style>
 </head>
@@ -18,12 +20,23 @@
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/dev/build/three.min.js" ></script>
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/dev/examples/js/controls/OrbitControls.js" ></script>
 
+	<div id = "title" ></div>
 	<div id = "menu" >
-		<div id = "title" ></div>
-		<div id = "contents" ></div>
+
+		<div id = "divMenuSub" ></div>
+
 	</div>
 
 <script>
+	var menuSub = 
+
+`
+<p><a href="https://example.com" target="_blank">example.com</a></p>
+
+<p><button onclick=parent.ifrContents.contentWindow.controls.autoRotate=!parent.ifrContents.contentWindow.controls.autoRotate; >toggle rotation</button></p>
+
+`;
+
 
 	var renderer, camera, controls, scene;
 	var geometry, material, mesh;
@@ -57,8 +70,10 @@
 
 		scene.add( mesh );
 
+		window.addEventListener( "unload", function() { parent.divMenuSub.innerHTML = ''; }, false );
 
-		parent.requestFile( "script2/script2.md", parent.divSubMenu );
+		parent.divMenuSub.innerHTML = menuSub;
+
 
 	}
 
@@ -78,6 +93,7 @@
 
 		requestAnimationFrame( animate );
 		renderer.render( scene, camera );
+		controls.update();
 
 	}
 

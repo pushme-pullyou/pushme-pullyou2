@@ -30,11 +30,41 @@ The general idea is to adapt the practices developed in Christopher Alexander's 
 <!-- * Statement of goals, objectives or strategies, applicable now as well as in the future -->
 
 * Single index.html
+    * Handles opening and displaying any and all files in sub-folders and whereever
 * Single main menu
+    * Written in Markdown
 * Multiple sub folders
+    * All files accessible from main menu
 * Multiple scripts
+    * Content may be Markdown of HTML in an iframe
+    * Menus can be markdown or HTML in an iframe
+   * Allows menus to behave like dialog boxes
 * Multiple sub menus
+    * Scripts loaded at run time
 * Multiple Read Me
+     * Every folder can have its own read me
+* All hosted as static files on GitHub/Bl.ocks.org/Glitch or wherever
+
+
+* Content files
+	* Appear in main body
+	* Current principal content
+	* May be .md or .html files
+	* only Three.js or equal as external library dependency
+* Content files HTML
+	* Run perfectly standalone or in iframe
+* Content file HTML menus
+	* If need .md files
+		* cannot depend on parent for conversion to HTML because file must be able to run standalone
+	* When standalone
+		* Menu content appears on right side - or as indicated in initialize defaults file
+		* Two placement areas in HTML file
+			* Div with id 'divMenuSub'
+			* Iframe with id 'ifrMenuSub'
+	* When inside iframe 
+* Menus should try to clean up after themselves
+````window.addEventListener( "unload", function() { parent.divMenuSub.innerHTML = ''; }, false );````
+
 
 ### Vision
 

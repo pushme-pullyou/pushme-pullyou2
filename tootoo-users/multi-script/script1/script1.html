@@ -10,7 +10,9 @@
 <style>
 
 	body { font: 11pt monospace; margin: 0; overflow: hidden; }
-	#menu { position: absolute; text-align: center; width: 100%; }
+
+	#title { position: absolute; text-align: center; width: 100%; }
+	#menu { position: absolute; right: 20px; max-width: 300px; top: 100px; }
 
 </style>
 </head>
@@ -18,12 +20,53 @@
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/dev/build/three.min.js" ></script>
 <script src = "https://cdn.rawgit.com/mrdoob/three.js/dev/examples/js/controls/OrbitControls.js" ></script>
 
+
+	<div id = "title" ></div>
 	<div id = "menu" >
-		<div id = "title" ></div>
-		<div id = "contents" ></div>
+
+		<div id = "divMenuSub" ></div>
+
 	</div>
 
+
 <script>
+
+
+	var txt = 'lorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?';
+
+	var menuSub = 
+
+			'<h2>' +
+				'<a href="" >' + location.pathname.split( '/' ).pop().slice( 0, -5).replace( /-/g, ' ' ) + '</a>' +
+				'<a href=http://jaanga.github.io/ > &#x24D8; </a>' +
+			'</h2>' +
+
+			'<div id=info ></div>' +
+
+			'<p>' + txt + '</p>' +
+
+			'<p>Zoom: <input type=range id=inp min=0 max=10 step=1 value=5 oninput=out.value=inp.value; title="0 to 10: OK" > <output id=out >5</output></p>' +
+
+			'<p>Pretty colors: <input type=checkbox id=inpPretty checked ></p>' +
+
+			'<p>' +
+				'Overlay: <select id=selList title="Select the 2D overlay" >' +
+					'<option>aaa aaa aaa</option>' +
+					'<option>bbb bbb</option>' +
+					'<option>cc cc cc cc</option>' +
+				'<select>' +
+			'</p>' +
+
+
+			'<p>' +
+				'<input type=radio name=field id=but1 />button 1' +
+				'<input type=radio name=field id=but2 checked />button 2' +
+				'<input type=radio name=field id=but3 />button 3' +
+			'</p>' +
+
+			'<p><button onclick=doIt(); value="it do" >do it</button></p>' +
+
+	'';
 
 	var renderer, camera, controls, scene;
 	var geometry, material, mesh;
@@ -57,8 +100,10 @@
 
 		scene.add( mesh );
 
-//console.log( 'parent.divMenuContents', parent.ifrMenu );
-		parent.requestFile( "script1/script1.md", parent.divSubMenu );
+
+		window.addEventListener( "unload", function() { parent.divMenuSub.innerHTML = ''; }, false );
+
+		parent.divMenuSub.innerHTML = menuSub;
 
 	}
 
