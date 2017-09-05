@@ -20,8 +20,8 @@ a { color: crimson; }
 
 blockquote, pre { background-color: #eee; padding: 10px; }
 
-	button, input[type=button] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 5px 28px; }
-	button:hover {background: #ccc; color: #fff; }
+	button, input[type=button] { background-color: #ddd; border: none; color: #322; cursor: pointer; padding: 3px 20px; }
+	button:hover { background: #ccc; color: #fff }
 
 	input[type=range] { -webkit-appearance: none; -moz-appearance: none; background-color: #ddd; width: 160px; }
 	input[type=range]::-moz-range-thumb { background-color: #888; border-radius: 0; width: 10px; }
@@ -109,6 +109,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 	const menuPrefix = defaults.menuPrefix ? defaults.menuPrefix : 'menu';
 	const userGitHub = defaults.user ? defaults.user : '';
 	const folderGitHub = defaults.folder ? defaults.folder : '';
+	const fileGitHub = defaults.file ? defaults.file : 'README.md';
 
 	document.body.style.setProperty( '--menu-width', menuWidth + 'px' );
 
@@ -138,7 +139,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		if ( !location.hash.length ) {
 
-			location.hash = defaults.url ? defaults.url : 'README.md';
+			location.hash = fileGitHub;
 
 			return;
 
@@ -146,11 +147,7 @@ blockquote, pre { background-color: #eee; padding: 10px; }
 
 		let url = location.hash.slice( 1 );
 		let app = location.hash.split( '#' )[ 1 ];
-console.log( 'url', url );
-
-
-//		if ( window.ifrMenu ) { ifrMenu.src = ''; }
-//		if ( window.divSubMenu ) { divSubMenu.innerHTML = ''; }
+//console.log( 'url', url );
 
 		if ( url.startsWith( menuPrefix ) || url.startsWith ( menuFile ) ) {
 
@@ -158,7 +155,7 @@ console.log( 'url', url );
 
 		} else if ( app.endsWith( '.md' ) ) {
 
-			divContentsContainer.innerHTML = '<div id = "divContents" class = "contents" src=' + url + ' ></div>';
+			divContentsContainer.innerHTML = '<div id = "divContents" class = "contents" ></div>';
 
 			requestFile( url, divContents );
 
@@ -172,9 +169,12 @@ console.log( 'url', url );
 
 		} else {
 
-			ifrMenu.contentWindow.location.hash = url;
+// get to here with intent only - following don't exist at load time
+
+			if ( parent.ifrMenuSub ) { ifrMenuSub.contentWindow.location.hash = url; }
 			if ( parent.divContents ) { divContents.contentWindow.location.hash = url; }
 			ifrContents.contentWindow.location.hash = url;
+
 		}
 
 	}
@@ -231,9 +231,9 @@ console.log( 'url', url );
 
 	function onclickEditButton(){
 
-		const file = location.hash.slice( 1 ) ? location.hash.slice( 1 ) : 'README.md';
+		const file = location.hash.slice( 1 ) ? location.hash.slice( 1 ) : fileGitHub;
 
- 		window.open( 'https://github.com/' + userGitHub + '/' + folderGitHub + file );
+ 		window.open( 'https://github.com/' + userGitHub + '/' + folderGitHub + '/' + file );
 
 	}
 

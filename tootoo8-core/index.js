@@ -11,6 +11,6 @@
 
 	defaults.repository = "pushme-pullyou2";
 
-	defaults.folder = 'pushme-pullyou2';
+	defaults.folder = 'pushme-pullyou2/blob/master/tootoo8-core';
 
-//	defaults.url = 'README.md';
+	defaults.file = 'README.md';

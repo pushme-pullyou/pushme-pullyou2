@@ -9,8 +9,8 @@
 
 	defaults.user = 'pushme-pullyou';
 
-	defaults.repository = 'pushme-pullyou.github.io';
+	defaults.repository = "pushme-pullyou2";
 
 	defaults.folder = 'pushme-pullyou2/blob/master/tootoo-more/';
 
-//	defaults.url = 'README.md';
+	defaults.file = 'README.md';

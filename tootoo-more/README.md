@@ -26,6 +26,28 @@ The fastest way of acquiring perceptions is by reading. Tools that help you acce
 * Know where you are. Menus with current selection highlighted
 
  
+
+* Single index.html
+*	 Handles opening and displaying any and all files in sub-folders and wherever
+
+* Single main menu
+	* Written in Markdown
+* All scripts must be able to run standalone and within an iframe
+	* Menus must be able to appear in both states
+* SubMenus on the right
+	* So as not to interfere with TooToo menus
+* Multiple sub folders
+	* All files accessible from main menu
+* Multiple scripts
+	* Content may be Markdown of HTML in an iframe
+*	 Menus can be markdown or HTML in an iframe
+	* Allows menus to behave like dialog boxes
+* Multiple sub menus
+* Scripts loaded at run time
+* Multiple Read Mes
+	* Every folder can have its own read me
+* All hosted as static files on GitHub/Bl.ocks.org/Glitch or wherever
+
 ### Vision
 
 * Explore new ways of storing and visualizing content
