@@ -30,9 +30,10 @@
 <script src= "../js/res-results.js" ></script>
 <script src= "../js/res-results-events.js" ></script>
 
+
 	<div id = "menu" >
 		<div id = "header" ><h1><a id = "title" href = "" ></a></h1></div>
-		<div id = "mnuContents" ></div>
+		<div id = "divMenuSub" ></div>
 	</div>
 
 <script>
@@ -68,7 +69,18 @@
 
 	function init() {
 
-		parent.foo.innerHTML += 'button, input[type=button] { background-color: #ccc; border: 0px #fff solid; color: #322; cursor: pointer; }';
+
+		if ( window.top === window.self ) {
+
+			title.innerHTML = location.href.split( '/' ).pop().slice( 0, -5 ).replace( /-/g, ' ' );
+
+		} else {
+
+			parent.ifrMenuSub.style.height = '350px';
+
+		}
+
+//		parent.foo.innerHTML += 'button, input[type=button] { background-color: #ccc; border: 0px #fff solid; color: #322; cursor: pointer; }';
 
 		onHashChange();
 
@@ -120,19 +132,13 @@
 
 		}
 
-		parent.mnuContents.innerHTML = txt;
+		parent.divMenuSub.innerHTML = txt;
 
 		if ( userData.login !== 'theo-armour' ) {
 
 			RES.getRepos( userData.login );
 
 		}
-
-//		height = document.body.scrollHeight;
-
-//		parent.ifrMenu.style.height = height + 'px';
-
-//console.log( '', xhr );
 
 	}
 

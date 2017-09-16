@@ -1,7 +1,7 @@
 <span style=display:none; >[You are now in a GitHub source code view - click this link to view the read me file as a web page]( https://pushme-pullyou.github.io "View file as a web page." ) </span>
 
 
-[Pushme-Pullyou README]( https://pushme-pullyou.github.io/ )
+[pushMe-pullYou Read Me]( https://pushme-pullyou.github.io/ )
 ================================================================================
 
 _JavaScript files to help you explore and build new tools on GitHub_

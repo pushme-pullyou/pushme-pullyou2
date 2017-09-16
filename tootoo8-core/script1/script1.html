@@ -58,7 +58,25 @@
 		scene.add( mesh );
 
 //console.log( 'parent.divMenuContents', parent.ifrMenu );
-		parent.requestFile( "script1/script1.md", parent.divSubMenu );
+
+		if ( window.top !== window.self ) {
+
+			parent.requestFile( "script1/script1.md", parent.divSubMenu );
+
+			parent.ifrMenu.src = 'plugins/threejs-basic.html';
+
+			parent.ifrMenu.style.height = '500px';
+
+			pmc = parent.ifrMenu.contentWindow
+			parent.ifrMenu.onload = function() { 
+
+				console.log( '', pmc ); pmc.controls.autoRotate = true; 
+
+				parent.ifrContents.contentWindow.controls.autoRotate = true; 
+
+			}
+
+		}
 
 	}
 
@@ -78,6 +96,7 @@
 
 		requestAnimationFrame( animate );
 		renderer.render( scene, camera );
+		controls.update();
 
 	}
 

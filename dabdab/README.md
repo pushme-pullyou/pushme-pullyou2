@@ -14,9 +14,9 @@ _<small>
 </small>_
 
 <!--
-
 <img  style=display:none; src="https://pushme-pullyou.github.io/gubgub/r1/gubgub-r1.jpg" width=800 >
 ***
+-->
 
 
 <iframe id=ifr src=https://pushme-pullyou.github.io/gubgub/r2/ width=100% height=600px ></iframe>
@@ -24,7 +24,6 @@ _Pushme-Pullyou GubGub R2 with randomly selected user or organization_
 
 _The above instance of GubGub is embedded inside an iframe. A number of links do not work as expected.
 For a fully-working demo it's better that you open the scripts full screen._
--->
 
 
 
@@ -233,13 +232,13 @@ API Calls:
 
 Editing the Code
 --------------------------------------------------------------------------------
-<!--
+
 <iframe src='https://pushme-pullyou.github.io/ace-editor/ace-view-r1.html#
 	https://pushme-pullyou.github.io/gubgub/r2/index.html' width=100% height=600 ></iframe>
 
 <input type=button onclick=window.location.href='https://github.com/pushme-pullyou/pushme-pullyou.github.io/blob/master/gubgub/r2/index.html';
 value='Source code listing' >
--->
+
 
 * Open this file: https://github.com/pushme-pullyou/pushme-pullyou.github.io/blob/master/gubgub/r2/index.html
 * Click the 'Raw' icon and save the raw file to your computer
